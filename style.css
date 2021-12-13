@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ECF2F8;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+#card {
+    background-color: white;
+    height: 280px;
+    width: 730px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+#image {
+    width: 285px;
+    height: 280px;
+    background-image: url(images/drawers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+
+#texte {
+    height: 216px;
+    width: 365px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#titre {
+    width: 100%;
+    height: 84px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.25px;
+    color: #48556A;
+    background-color: white;
+    cursor: default;
+}
+
+#composants {
+    width: 100%;
+    height: 60px;
+    color: #6E8098;
+    font-size: 13px;
+    background-color: white;
+    cursor: default;
+}
+
+#profil {
+    width: 100%;
+    height: 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+#avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(images/avatar-michelle.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#cadre {
+    /* border: 2px solid red; */
+    width: 172px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+#flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+}
+
+#michelle {
+    font-weight: bold;
+    color: #48556A;
+    font-size: 13px;
+    letter-spacing: 0.12px;
+    background-color: white;
+    cursor: default;
+}
+
+#date {
+    color: #9DAEC2;
+    font-size: 13px;
+    background-color: white;
+    cursor: default;
+}
+
+#flèche {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ECF2F8;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+#interieur {
+    height: 22px;
+    width: 22px;
+    background-image: url(images/arrow.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+#interieur:hover {
+    cursor: pointer;
+}
+
+#apparaitre {
+    height: 55px;
+    width: 245px;
+    background-color: #48556A;
+    position: absolute;
+    right: -60px;
+    bottom: 90px;
+    border-radius: 10px;
+    display: none;
+    animation: myAnim 9s ease-in-out 0s infinite normal forwards;
+}
+/* Faire flotter l'élément box */
+@keyframes myAnim {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70% {
+      transform: translateY(-8px);
+    }
+  
+    20%,
+    40%,
+    60% {
+      transform: translateY(8px);
+    }
+  
+    80% {
+      transform: translateY(6.4px);
+    }
+  
+    90% {
+      transform: translateY(-6.4px);
+    }
+  }
+
+#final {
+    text-decoration: none;
+    color: black;
+}
+
+#final {
+    animation-name: focus-in-contract;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+@keyframes focus-in-contract {
+  0%{
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100%{
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 12px 0 12px;
+    border-color: #48556A transparent transparent transparent;
+    position: absolute;
+    left: 119px;
+    top: 55px;
+}
+
+#box {
+    /* border: 1px solid white; */
+    background-color: #48556A;
+    width: 175px;
+    height: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#share{
+    font-size: 13px;
+    color: #9DAEC2;
+    letter-spacing: 5px;
+    background-color: #48556A;
+    cursor: default;
+    user-select:none;
+}
+
+#icons{
+    background-color: #48556A;
+    width: 92px;
+    height: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select:none;
+}
+
+img {
+    background-color: #48556A;
+}
+
+a {
+    /* text-decoration: none; */
+    background-color: #48556A;
+}
+
+footer {
+    position: absolute;
+    bottom: 30px;
+}
+
+
+/* Style CSS pour le javascript : */
+
+#apparaitre.visible {
+    display: block;
+    display: flex;
+}
+
+#flèche.change {
+    background-color: #6E8098;
+}
+
+#interieur.change2{
+    background-color: #6E8098;
+    background-image: url(images/arrow2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
