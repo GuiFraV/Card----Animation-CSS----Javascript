@@ -123,9 +123,40 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    
+    box-shadow: 0 0 0 rgba(248, 16, 16, 0.4);
+    animation: pulse 2s infinite;
+  }
+  .pulse:hover {
+    animation: none;
+  }
 
-}
+  /* Création d'une animation de pulsation : */
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
 
 #interieur {
     height: 22px;
@@ -281,4 +312,87 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* Rendre responsive : à 375 px  */
+@media only screen and (max-width : 376px ){
+
+    body{
+        flex-direction: column;
+    }
+    #card {
+        flex-direction: column;
+        width: 327px;
+        height: 512px;
+    }
+    #image{
+        width: 327px;
+        height: 200px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+    }
+    #texte{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90%;
+    }
+    #texte {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+    #titre{
+        width: 263px;
+        height: 72px;
+        font-size:16px;
+    }
+    #composants{
+        width: 263px;
+        height: 100px;
+        line-height: 20px;
+        letter-spacing: 0.12px;
+        font-size: 14px;
+    }
+    #apparaitre{
+        animation: none;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 64px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    #apparaitre.visible {
+        display: flex;
+        justify-content: space-around;
+    }
+    #triangle {
+        display: none;
+    }
+    #flèche.change {
+        z-index: 1;
+    }
+    #interieur.change2{
+        position: absolute;
+        z-index: 2;
+    }
+    #profil{
+        margin-top: 30px;
+    }
+    #responsive2{
+        width: 100px;
+        height: 50px;
+       background-color: transparent;
+    }
+    footer {
+        font-size: 11px;
+        bottom: 2px;
+        text-align: center;
+        width: 95%;
+    }
+
 }
